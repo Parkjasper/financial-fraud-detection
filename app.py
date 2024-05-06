@@ -4,10 +4,10 @@ import numpy as np
 import joblib
 
 # Load the trained model
-model = joblib.load('frauddetection.pkl')
+model = joblib.load('Frauddetection.pkl')
 
 # Define the Streamlit app
-st.title("Credit Card Fraud Detection")
+st.title("Financial Transaction Fraud Detection")
 
 # Description of the app
 st.write("""
