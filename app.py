@@ -21,8 +21,8 @@ Welcome to our Credit Card Fraud Detection Web App! This app aims to detect frau
 st.sidebar.header('Transaction Details')
 amount = st.sidebar.number_input("Transaction Amount (Rs)", min_value=0.0, max_value=110000.0)
 oldbalanceOrg = st.sidebar.number_input("Old Balance Orig (Rs)", min_value=0.0, max_value=110000.0)
-newbalanceOrig = st.sidebar.number_input("New Balance Orig (Rs)", min_value=0.0, max_value=110000.0)
 oldbalanceDest = st.sidebar.number_input("Old Balance Dest (Rs)", min_value=0.0, max_value=110000.0)
+newbalanceOrig = st.sidebar.number_input("New Balance Orig (Rs)", min_value=0.0, max_value=110000.0)
 newbalanceDest = st.sidebar.number_input("New Balance Dest (Rs)", min_value=0.0, max_value=110000.0)
 transaction_type = st.sidebar.selectbox("Transaction Type", 
                                        {"CASH_IN": 0, "CASH_OUT": 1, "DEBIT": 2, "PAYMENT": 3, "TRANSFER": 4})
