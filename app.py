@@ -47,6 +47,27 @@ if __name__ == "__main__":
     newbalanceorig = st.sidebar.number_input("New Balance Orig", value=0.0, step=0.01)
     oldbalancedest = st.sidebar.number_input("Old Balance Dest", value=0.0, step=0.01)
     newbalancedest = st.sidebar.number_input("New Balance Dest", value=0.0, step=0.01)
+def predict_fraud(data: fraudDetection):
+    try:
+        # Convert input data to numpy array
+        features = np.array([[data.step, data.types, data.amount, data.oldbalanceorig, data.newbalanceorig, data.oldbalancedest, data.newbalancedest]])
+
+        # Log input features
+        st.write("Input features:", features)
+
+        # Use the loaded model to predict
+        prediction = model.predict(features)
+
+        # Log prediction
+        st.write("Prediction:", prediction)
+
+        # Return prediction result
+        return "fraudulent" if prediction == 1 else "not fraudulent"
+
+    except Exception as e:
+        # Log and return error message
+        st.error(f"An error occurred: {str(e)}")
+        return "Error"
 
     # Create a fraudDetection object
     input_data = fraudDetection(step=step, types=types, amount=amount, oldbalanceorig=oldbalanceorig, newbalanceorig=newbalanceorig, oldbalancedest=oldbalancedest, newbalancedest=newbalancedest)
