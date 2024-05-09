@@ -49,7 +49,7 @@ def predict_fraud(data: fraudDetection):
 # Streamlit app main code
 if __name__ == "__main__":
     # Display introductory message
-    st.markdown("### Credit Card Fraud Detection API 🙌🏻")
+    st.markdown("### Financial Transaction Fraud Detection 🙌🏻")
 
     # Display instructions
     st.markdown("#### Instructions:")
