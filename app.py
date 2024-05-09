@@ -18,8 +18,8 @@ class fraudDetection(BaseModel):
     types: int
     amount: float
     oldbalanceorig: float
-    newbalanceorig: float
     oldbalancedest: float
+    newbalanceorig: float
     newbalancedest: float
     isflaggedfraud: int
 
@@ -69,8 +69,8 @@ if __name__ == "__main__":
     types = st.sidebar.number_input("Types", value=0, step=1)
     amount = st.sidebar.number_input("Amount", value=0.0, step=0.01)
     oldbalanceorig = st.sidebar.number_input("Old Balance Orig", value=0.0, step=0.01)
-    newbalanceorig = st.sidebar.number_input("New Balance Orig", value=0.0, step=0.01)
     oldbalancedest = st.sidebar.number_input("Old Balance Dest", value=0.0, step=0.01)
+    newbalanceorig = st.sidebar.number_input("New Balance Orig", value=0.0, step=0.01)
     newbalancedest = st.sidebar.number_input("New Balance Dest", value=0.0, step=0.01)
     isflaggedfraud = 0
     if amount >= 200000:
@@ -84,8 +84,8 @@ if __name__ == "__main__":
         types=types,
         amount=amount,
         oldbalanceorig=oldbalanceorig,
-        newbalanceorig=newbalanceorig,
         oldbalancedest=oldbalancedest,
+        newbalanceorig=newbalanceorig,
         newbalancedest=newbalancedest,
         isflaggedfraud=isflaggedfraud
     )
