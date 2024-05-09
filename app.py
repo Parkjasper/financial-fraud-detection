@@ -27,12 +27,13 @@ def predict(amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDes
         prediction = model.predict(features)
 
         # Return prediction result
-        return "Fraudulent" if prediction == 1 else "Not Fraudulent"
+        return "Fraudulent" if prediction[0] == 1 else "Not Fraudulent"
     
     except ValueError:
         return "Error: Invalid input. Please ensure all input values are numeric."
     except Exception as e:
         return f"An error occurred: {str(e)}"
+
 
 # Define the Streamlit app
 def main():
