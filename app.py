@@ -21,12 +21,13 @@ class fraudDetection(BaseModel):
     newbalanceorig: float
     oldbalancedest: float
     newbalancedest: float
+    isflaggedfraud: int
 
 # Function to predict fraud based on input data
 def predict_fraud(data: fraudDetection):
     try:
         # Convert input data to numpy array
-        features = np.array([[data.step, data.types, data.amount, data.oldbalanceorig, data.newbalanceorig, data.oldbalancedest, data.newbalancedest], data.isflaggedfraud])
+        features = np.array([[data.step, data.types, data.amount, data.oldbalanceorig, data.newbalanceorig, data.oldbalancedest, data.newbalancedest, data.isflaggedfraud]])
 
         # Log input features
         st.write("Input features:", features)
@@ -65,13 +66,22 @@ if __name__ == "__main__":
     oldbalancedest = st.sidebar.number_input("Old Balance Dest", value=0.0, step=0.01)
     newbalancedest = st.sidebar.number_input("New Balance Dest", value=0.0, step=0.01)
     isflaggedfraud = 0
-if amount >= 200000:
-  isflaggedfraud = 1
-else:
-  isflaggedfraud = 0
+    if amount >= 200000:
+        isflaggedfraud = 1
+    else:
+        isflaggedfraud = 0
 
     # Create a fraudDetection object
-    input_data = fraudDetection(step=step, types=types, amount=amount, oldbalanceorig=oldbalanceorig, newbalanceorig=newbalanceorig, oldbalancedest=oldbalancedest, newbalancedest=newbalancedest, isflaggedfraud=isflaggedfraud)
+    input_data = fraudDetection(
+        step=step,
+        types=types,
+        amount=amount,
+        oldbalanceorig=oldbalanceorig,
+        newbalanceorig=newbalanceorig,
+        oldbalancedest=oldbalancedest,
+        newbalancedest=newbalancedest,
+        isflaggedfraud=isflaggedfraud
+    )
 
     # Predict fraud based on input data
     if st.sidebar.button("Predict Fraud"):
