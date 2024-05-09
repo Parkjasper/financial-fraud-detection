@@ -55,7 +55,7 @@ if __name__ == "__main__":
     st.markdown("#### Instructions:")
     st.markdown("- Enter the transaction details in the sidebar.")
     st.markdown("- Click the 'Predict Fraud' button to see the prediction result.")
-    st.markdown("For types of transaction⬇️")
+    st.markdown("-For types of transaction⬇️")
     st.markdown("""
                  0 for 'Cash In' Transaction\n 
                  1 for 'Cash Out' Transaction\n 
