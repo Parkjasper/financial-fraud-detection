@@ -25,7 +25,7 @@ oldbalanceDest = st.sidebar.number_input("Old Balance Dest (Rs)")
 newbalanceOrig = st.sidebar.number_input("New Balance Orig (Rs)")
 newbalanceDest = st.sidebar.number_input("New Balance Dest (Rs)")
 transaction_type = st.sidebar.selectbox("Transaction Type", 
-                                       {"CASH_IN": 0, "CASH_OUT": 1, "DEBIT": 2, "PAYMENT": 3, "TRANSFER": 4})
+                                       {"CASH_IN": 0, "CASH_OUT": 1, "PAYMENT": 2})
 
 # Prediction function
 def predict(amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest, transaction_type):
