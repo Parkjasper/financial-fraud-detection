@@ -19,11 +19,11 @@ Welcome to our Credit Card Fraud Detection Web App! This app aims to detect frau
 
 # Input features of the transaction
 st.sidebar.header('Transaction Details')
-amount = st.sidebar.number_input("Transaction Amount (Rs)"
-oldbalanceOrg = st.sidebar.number_input("Old Balance Orig (Rs)"
-oldbalanceDest = st.sidebar.number_input("Old Balance Dest (Rs)"
-newbalanceOrig = st.sidebar.number_input("New Balance Orig (Rs)"
-newbalanceDest = st.sidebar.number_input("New Balance Dest (Rs)"
+amount = st.sidebar.number_input("Transaction Amount (Rs)")
+oldbalanceOrg = st.sidebar.number_input("Old Balance Orig (Rs)")
+oldbalanceDest = st.sidebar.number_input("Old Balance Dest (Rs)")
+newbalanceOrig = st.sidebar.number_input("New Balance Orig (Rs)")
+newbalanceDest = st.sidebar.number_input("New Balance Dest (Rs)")
 transaction_type = st.sidebar.selectbox("Transaction Type", 
                                        {"CASH_IN": 0, "CASH_OUT": 1, "DEBIT": 2, "PAYMENT": 3, "TRANSFER": 4})
 
