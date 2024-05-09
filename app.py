@@ -26,7 +26,7 @@ class fraudDetection(BaseModel):
 def predict_fraud(data: fraudDetection):
     try:
         # Convert input data to numpy array
-        features = np.array([[data.step, data.types, data.amount, data.oldbalanceorig, data.newbalanceorig, data.oldbalancedest, data.newbalancedest]])
+        features = np.array([[data.step, data.types, data.amount, data.oldbalanceorig, data.newbalanceorig, data.oldbalancedest, data.newbalancedest], data.isflaggedfraud])
 
         # Log input features
         st.write("Input features:", features)
