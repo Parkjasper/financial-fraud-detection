@@ -67,10 +67,10 @@ if __name__ == "__main__":
     step = st.sidebar.number_input("Step", value=0, step=1)
     types = st.sidebar.number_input("Types", value=0, step=1)
     amount = st.sidebar.number_input("Amount", value=0.0, step=0.01)
-    oldbalanceorig = st.sidebar.number_input("Old Balance Orig", value=0.0, step=0.01)
-    oldbalancedest = st.sidebar.number_input("Old Balance Dest", value=0.0, step=0.01)
-    newbalanceorig = st.sidebar.number_input("New Balance Orig", value=0.0, step=0.01)
-    newbalancedest = st.sidebar.number_input("New Balance Dest", value=0.0, step=0.01)
+    oldbalanceorig = st.sidebar.number_input("Sender balance before transaction was made", value=0.0, step=0.01)
+    oldbalancedest = st.sidebar.number_input("Sender balance after transaction was made", value=0.0, step=0.01)
+    newbalanceorig = st.sidebar.number_input("Receiver balance before transaction was made", value=0.0, step=0.01)
+    newbalancedest = st.sidebar.number_input("Receiver balance after transaction was made", value=0.0, step=0.01)
     isflaggedfraud = 0
     if amount >= 200000:
         isflaggedfraud = 1
