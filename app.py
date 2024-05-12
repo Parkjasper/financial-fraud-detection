@@ -9,7 +9,7 @@ model = joblib.load('Frauddetection.pkl')
 # Define the Streamlit app title and description
 st.title("Financial Transaction Fraud Detection")
 st.write("""
-An API that utilizes a Machine Learning model to detect if a credit card transaction is fraudulent""")
+An API that utilizes a Machine Learning model to detect if a financial transaction is fraudulent or not.""")
 
 # Define the fraudDetection class for input data validation
 class fraudDetection(BaseModel):
